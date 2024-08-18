@@ -54,10 +54,10 @@ main {
   display: flex;
 }
 .weather-app-icon {
-  font-size: 44px;
-  margin-top: 22px;
+  font-size: 40px;
+  margin-top: 10px;
 }
-.weather-app-temperature-value {
+.weather-app-temperature {
   font-size: 88px;
   font-weight: bold;
 }

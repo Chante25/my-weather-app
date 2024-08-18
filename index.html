@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
       rel="stylesheet"
     />
-     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -20,7 +20,7 @@
           <input
             type="search"
             placeholder="Enter a city.."
-            required
+            required=""
             id="search-form-input"
             class="search-form-input"
           />
@@ -30,16 +30,25 @@
       <main>
         <div class="weather-app-data">
           <div>
-            <h1 class="weather-app-city" id="city"></h1>
+            <h1 class="weather-app-city" id="city">Cape Town</h1>
             <p class="weather-app-details">
-              Monday 17:03, clear sky
+              <span id="time">Sunday 15:16</span>,
+              <span id="description">few clouds</span>
               <br />
-              Humidity: <strong>32%</strong>, Wind: <strong>6.69km/h</strong>
+              Humidity: <strong id="humidity">73%</strong>, Wind:
+              <strong id="wind-speed">6.17km/h</strong>
             </p>
           </div>
           <div class="weather-app-temperature-container">
-            <div class="weather-app-icon">⛅</div><div class="weather-app-temperature-value" id="temperature"></div>
-            <div class="weather-app-unit">°C</div> 
+            <div id="icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                class="weather-app-icon"
+              />
+            </div>
+            <div class="weather-app-temperature" id="temperature">17</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
         </div>
       </main>
       <footer>
@@ -62,5 +71,4 @@
     </div>
     <script src="src/index.js"></script>
   </body>
-
 </html>
